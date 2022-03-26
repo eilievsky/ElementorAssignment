@@ -24,6 +24,9 @@ There are several directories and modules:
 
 More comments dan be found inside code
 
+###Installation
+run pip install -r requirements.txt
+
 ### Recommendation to improve process
 - To speed up process can be made as parallel execution or by creating data stream application
 - Add logger
