@@ -34,5 +34,19 @@ run pip install -r requirements.txt
 - Implement save into database (didn't have enough time to do it). The basic structure is ready. Can be by saving data structure using sqlalchemy
 
 
+### Solution for query question
+
+For the first query the solution (the is not comple for my opinion) is:
+
+SELECT
+  department_id, (MAX(salary) - (SELECT MAX(salary) FROM employees
+                                    WHERE department_id = emp.department_id
+                                    AND salary < MAX(emp.salary))
+                 ) sal_diff
+FROM employees emp
+GROUP BY DeptID
+ORDER BY DeptID
+
+For second query - could not solve it in time
 
 
